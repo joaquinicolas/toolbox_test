@@ -1,0 +1,25 @@
+#1) De que forma guardarias los archivos que un usuario sube por la aplicacion al servidor y porque?
+
+Utilizaria el file system. Ya que por cuestiones de rendiemiento, considero, tiene menor costo de procesamiento que almacenarlo en la base de datos.
+Las ventajas que veo sobre almacenamiento de archivos en base de datos son:
+
+El file system contiene una fecha y hora asociada a los archivos, la base de datos es mas limitado en este sentido. Guardaria en la base de datos otra informacion relacionada a la imagen, en caso de ser necesario,  ej: IP, MAC.
+
+Cada vez que requiera del archivo necsitaria interactuar con la base de datos, y si son mas de un servicio o sistema los que acceden a estos archivos, estos consumirian recursos del motor de base de datos.
+
+
+
+#2) Implementarias un cache del lado cliente? Porque?
+
+Para el caso de los archivos dejaria el que tienen los browser, ya que los archivos no es muy comun que vayan a cambiar. En caso de que esto pase versionaria el archivo. 
+Si mi cliente es mobile igualmente implementaria un cache.
+
+
+#3) Cual es la diferencia entre SOAP y REST?
+
+SOAP es un protocolo y REST una arquitectura.
+REST no guarda estado de las peticiones, utiliza los protocolos HTTP o HTTPS
+y SOAP puede utilizarse bajo HTTP,HTTPS, SMTP.
+REST puede especificar un formato (application/json, application/text), siempre que este formato sea soportado por el servidor, y SOAP unicamente se comunica por XML.
+REST utiliza una unica URI y resuelve el recurso a alcanzar mediante HTTP Verbs + URI.
+SOAP demanda mayor costo de procesamiento y su curva de aprendizaje es mayor.

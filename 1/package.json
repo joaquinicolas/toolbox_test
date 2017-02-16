@@ -1,0 +1,22 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "Toolbox test",
+  "main": "app.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "co-mocha": "1.1.2",
+    "mocha": "2.5.3",
+    "sinon": "1.17.4",
+    "sinon-chai": "2.8.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+    "test": "npm run test-unit",
+    "test-unit": "mocha ./libs/*.spec.js"
+  },
+  "author": "Joaquin Noé",
+  "license": "ISC"
+}
